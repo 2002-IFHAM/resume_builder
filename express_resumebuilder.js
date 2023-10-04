@@ -6,7 +6,6 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/resume", function (req, res) {
   res.sendFile(__dirname + "/resumebuilder.html");
 });
-
 app.get('/process_get', function (req, res) {
   var firstName = req.query.first_name || "";
   var lastName = req.query.last_name || "";
@@ -23,7 +22,6 @@ app.get('/process_get', function (req, res) {
   var skills = req.query.skills || "";
 
   var responseHTML = `
-  
     <h1>Resume Information</h1>
     <p><strong>First Name:</strong> ${firstName}</p>
     <p><strong>Last Name:</strong> ${lastName}</p>
